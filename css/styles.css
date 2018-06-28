@@ -1,15 +1,67 @@
-.ping {
-  background-color: orange;
-  display: none;
+body {
+  background-color: #E9E7DA;
 }
 
-.pong {
-  background-color: red;
-  display: none;
+.panel {
+  background-color: #636846;
+  color: #CDA34F;
+  padding-left: 40px;
+  padding-bottom: 10px;
+  margin-top: 50px;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 
-.pingpong {
-  background-color: yellow;
-  display: none;
-  color: black;
+#userInput {
+  background-color: #636846;
+  color: #C0B283;
+  width: 550px;
+  height: 60px;
+  margin-top: 20px;
+}
+
+h1 {
+  color: #373F27;
+  font-size: 100px;
+  font-family: 'Bungee Shade', cursive;
+}
+
+h2 {
+  font-family: 'Bungee Shade', cursive;
+}
+
+h4 {
+  font-family: 'Bungee', cursive;
+}
+
+#rules {
+  font-family: 'Yatra One', cursive;
+}
+
+label {
+  font-family: 'Bungee', cursive;
+}
+
+button {
+  background-color: #373F27;
+  color: #CDA34F;
+}
+
+.btn:hover {
+  color: #636846;
+}
+
+#output {
+  color: #CDA34F;
+  padding-left: 30px;
+  font-size: 20px;
+  list-style: none;
+  font-family: 'Bungee', cursive;
+}
+
+
+#pingPong {
+  margin: 20px;
+  color: #373F27;
+  font-size: 50px;
 }
