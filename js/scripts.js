@@ -18,3 +18,16 @@ var runPingPong = function(userInput) {
   }
   return countNumbers
 };
+
+//user interface logic
+$(document).ready(function() {
+  $("form#pingPong").submit(function() {
+    event.preventDefault();
+    $(".result > li").remove();
+    var userInput = parseInt($("#userInput").val());
+    var results = runPingPong(userInput);
+    results.forEach(function(result) {
+      $(".result").prepend("<li>" + result + "</li>");
+    });
+  });
+});
