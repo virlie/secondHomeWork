@@ -1,34 +1,20 @@
-//business logic
-var countingArray = [];
-
-function inputToArray(inputNumber) { //make input into array
-  //count to number
-  for (var i = 1; i <= inputNumber; i++) {
-    countingArray.push(i);
+var runPingPong = function(userInput) {
+  var numbers = []
+  var countNumbers = []
+  for (var index = 0; index < userInput; index ++) {
+  	numbers.push(userInput);
   }
-  return convertToPingPong();
-}
-function convertToPingPong() { //convert array items to ping/pong/pingpong
-  var index = 0;
-  countingArray.forEach(function(number) {
-    if (number % 15 === 0) {
-      countingArray[index] = "class='pingpong'>\u221EPINGPONG\u221E";
-    } else if (number % 3 === 0) {
-      countingArray[index] = "class='ping'>\u2022PING\u2022";
-    } else if (number % 5 === 0) {
-      countingArray[index] = "class='pong'>\u00B0PONG\u00B0";
-    } else {
-      countingArray[index] = "class='number'>"+number
+  for (var i = 0; i < numbers.length; i++) {
+    countNumbers.push(numbers[i] - i);
+  }
+  for (var i = 0; i < countNumbers.length; i++) {
+    if ((countNumbers[i] % 3 === 0) && (countNumbers[i] % 15 !== 0)){
+      countNumbers.splice(i, 1, "ping");
+    } else if ((countNumbers[i] % 5 === 0) && (countNumbers[i] % 15 !== 0)) {
+      countNumbers.splice(i, 1, "pong");
+    } else if (countNumbers[i] % 15 === 0) {
+      countNumbers.splice(i, 1, "ping-pong");
     }
-    index++;
-  });
-}
-//user interface logic
-$(document).ready(function(){
-  $("form#userInput").submit(function(){
-    event.preventDefault();
-    var value = $("#inputString").val();
-    var index = 0;
-    inputToArray(value);
-    countingArray.forEach(function(output){
-      var lengthFourth = countingArray.length/4;
+  }
+  return countNumbers
+};
