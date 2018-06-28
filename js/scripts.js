@@ -23,3 +23,12 @@ function convertToPingPong() { //convert array items to ping/pong/pingpong
     index++;
   });
 }
+//user interface logic
+$(document).ready(function(){
+  $("form#userInput").submit(function(){
+    event.preventDefault();
+    var value = $("#inputString").val();
+    var index = 0;
+    inputToArray(value);
+    countingArray.forEach(function(output){
+      var lengthFourth = countingArray.length/4;
