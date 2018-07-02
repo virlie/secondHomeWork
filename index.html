@@ -12,42 +12,29 @@
   </head>
   <body>
     <div class="container">
-         <p class="rules">Any number it encounters that is divisble by 3 will become "PING"</p>
-         <p class="rules">Any number it encounters that is divisble by 5 will become "PONG"</p>
-         <p class="rules">Any number it encounters that is divisble by 15 will become "PINGPONG"</p>
-         <form id="userInput">
-           <div class="form-group">
-             <label for="string">Enter a number:</label>
-             <input id="inputString" type="number">
-           </div
-             <button type="submit" class="btn btn-primary ">Count</button>
-          </form>
-          <form id="resetPage">
-            <button type="submit" class="btn btn-warning">Try another number!</button>
-          </form>
-        </div>
+      <div class="topOfPage">
+        <h1>Let's Play</h1>
+        <h1>Ping-Pong</h1>
       </div>
+      <div class="panel">
+        <h2>Here's how it works:</h2>
+        <h4>Ping-Pong will count up to your number from 1 with the following exceptions:</h3>
+        <ul id="rules">
+          <li>Numbers divisible by 3 will be replaced with "ping"</li>
+          <li>Numbers divisible by 5 will be replaced with "pong"</li>
+          <li>Numbers divisible by 15 will be replaced with "ping-pong"</li>
+        </ul>
+      </div>
+      <form id="pingPong">
+        <div class="form-group">
+          <label class="inputLabel" for="userInput">Enter your number:</label>
+          <input class="form-control" type="text" id="userInput">
+        </div>
+        <button type="submit" class="btn" id="formSubmit">Play</button>
+      </form>
       <div id="output">
         <span class="result"></span>
       </div>
-    <!-- <div class="row">
-        <div id="result" class="col-md-3">
-        <ul id="resultDisplay">
-        </ul>
-      </div>
-      <div id="result2" class="col-md-3">
-        <ul id="resultDisplay2">
-        </ul>
-      </div>
-      <div id="result3" class="col-md-3">
-        <ul id="resultDisplay3">
-        </ul>
-      </div>
-      <div id="result4" class="col-md-3">
-        <ul id="resultDisplay4">
-        </ul>
-      </div>
-    </div> -->
-  </div>
+    </div>  
   </body>
 </html>
